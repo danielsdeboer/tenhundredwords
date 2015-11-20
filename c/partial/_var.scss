@@ -1,0 +1,47 @@
+// Font sizing
+$fsize-p-base: 110%;
+$fsize-h1-base: 200%;
+$fsize-h2-base: 120%;
+
+$fsize-h1-article: $fsize-h1-base * .8;
+
+// Padding
+$pad-header: 2em;
+$pad-header-h1: .5em;
+
+$pad-article: 1em;
+$pad-article-h1: 1em;
+$pad-article-p: .5em;
+
+
+// Color stack
+$color-body-fallback: #8D6E63;
+$color-body-background: #bdbdbd;
+$color-container-overlay: #006064;
+$color-font-base: #fff;
+$color-font-accent: #424242;
+$color-font-post-info: #fff;
+
+$color-button-post-info: #9e9e9e;
+
+$color-accent: #bdbdbd;
+$color-accent-vibrant: #b2ff59;
+
+
+// Font stack
+// $font-base: 'Lato', sans-serif;
+$font-base: 'Lato', sans-serif;
+$font-hero: 'Josefin Slab', serif;
+$font-info: 'Arvo', serif;
+
+$font-nav-h1-bp1: italic 300 4vw $font-hero;
+$font-nav-h1-bp2: italic 300 2.7vw $font-hero;
+
+$font-nav-li-bp1: italic 300 3.5vw $font-hero;
+$font-nav-li-bp2: italic 300 2vw $font-hero;
+
+$font-hero-bp1: 100 5.5vw $font-hero;
+$font-hero-bp2: 100 4.5vw $font-hero;
+
+// Shapes and whatnot
+$circle-hw: 3rem;

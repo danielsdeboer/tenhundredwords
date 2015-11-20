@@ -1,0 +1,35 @@
+// Breakpoint mins and maxs
+$breakpoint-mobile-small-min: 0;
+$breakpoint-mobile-small-max: 600px;
+$breakpoint-mobile-large-min: 601px;
+$breakpoint-mobile-large-max: 10000px;
+$breakpoint-desktop-small-min: 801px;
+$breakpoint-desktop-small-max: 1200px;
+$breakpoint-desktop-large-min: 1201px;
+$breakpoint-desktop-large-max: 100000px;
+
+@mixin breakpoint($breakpoint-number) {
+  @if ($breakpoint-number == 1) {
+    @media only screen and (min-width: $breakpoint-mobile-small-min) and (max-width: $breakpoint-mobile-small-max) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint-number == 2) {
+    @media only screen and (min-width: $breakpoint-mobile-large-min) and (max-width: $breakpoint-mobile-large-max) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint-number == 3) {
+    @media only screen and (min-width: $breakpoint-desktop-small-min) and (max-width: $breakpoint-desktop-small-max) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint-number == 4) {
+    @media only screen and (min-width: $breakpoint-desktop-large-min) and (max-width: $breakpoint-desktop-large-max) {
+      @content;
+    }
+  }
+}

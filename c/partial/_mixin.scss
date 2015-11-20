@@ -1,0 +1,16 @@
+@mixin hw($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin tl($top, $left) {
+  top: $top;
+  left: $left;
+}
+
+@mixin trlb($top, $right, $left, $bottom) {
+  top: $top;
+  right: $right;
+  left: $left;
+  bottom: $bottom;
+}

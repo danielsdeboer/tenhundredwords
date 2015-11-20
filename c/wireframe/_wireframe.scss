@@ -1,0 +1,6 @@
+@import 'var';
+
+@mixin wireframe($darken: 0%) {
+  background-color: darken($wireframe-bg, $darken);
+  border: 1px solid darken($wireframe-border, $darken);
+}

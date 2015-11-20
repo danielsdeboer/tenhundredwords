@@ -1,0 +1,151 @@
+@import 'partial/reset', 'partial/mixin', 'partial/color', 'partial/breakpoint', 'bourbon/bourbon', 'wireframe/wireframe';
+
+@import url(https://fonts.googleapis.com/css?family=Arvo:400);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+
+  @include hw(100%, 100%);
+
+  font-family: 'Arvo', serif;
+}
+
+.thw-header {
+  // @include wireframe(5%);
+
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+
+  @include hw(10vh, 90%);
+
+  border-bottom: 1px solid #bdbdbd;
+
+  h1 {
+    color: #000;
+    font-size: 300%;
+    text-align: center;
+  }
+
+  a:link,
+  a:visited,
+  a:active,
+  a:hover {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.thw-container {
+  // @include wireframe(5%);
+
+  @include display(flex);
+  @include flex-direction(row);
+  @include align-items(stretch);
+  @include justify-content(center);
+
+  @include hw(80vh, 100vw);
+}
+
+.input-container,
+.output-container {
+  @include flex(1);
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(stretch);
+  @include justify-content(center);
+
+  @include hw(100%, auto);
+}
+
+.thw-input,
+.thw-output {
+  // @include wireframe(15%);
+
+  @include flex(20);
+
+  border: 1px solid #bdbdbd;
+
+  font-family: 'Arvo', serif;
+  font-size: 1.2rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: .5em .8em;
+}
+
+.info-container {
+  @include flex(1);
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+
+  @include hw(100%, auto);
+}
+
+.thw-info {
+  // @include wireframe(15%);
+
+  @include hw(auto, 60%);
+
+  @include flex(20);
+
+  border: 0;
+  font-size: 1.1em;
+  line-height: 1.5;
+  padding: 0;
+
+  p {
+    margin-bottom: .8em;
+  }
+}
+
+.thw-footer {
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+
+  @include hw(10vh, 100%);
+
+  font-size: 120%;
+}
+
+h2 {
+  // @include wireframe(10%);
+
+  @include flex(1);
+
+  font-size: 130%;
+  text-align: center;
+  min-height: 2.5em;
+  padding: .6em 0;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+  color: #BF360C;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  background-color: #FF8A65;
+}
