@@ -1,4 +1,4 @@
-@import 'partial/reset', 'partial/mixin', 'partial/color', 'partial/breakpoint', 'bourbon/bourbon', 'wireframe/wireframe';
+@import 'partial/reset', 'partial/mixin', 'partial/color', 'partial/breakpoint-main', 'bourbon/bourbon', 'wireframe/wireframe';
 
 @import url(https://fonts.googleapis.com/css?family=Arvo:400);
 
@@ -30,8 +30,15 @@ body {
   border-bottom: 1px solid #bdbdbd;
 
   h1 {
+    @include breakpoint(1) {
+      font-size: 200%;
+    }
+
+    @include breakpoint(2) {
+      font-size: 300%;
+    }
+
     color: #000;
-    font-size: 300%;
     text-align: center;
   }
 
@@ -76,10 +83,18 @@ body {
 
   @include flex(20);
 
+  @include breakpoint(1) {
+    font-size: 100%;
+  }
+
+  @include breakpoint(2) {
+    font-size: 120%;
+  }
+
   border: 1px solid #bdbdbd;
 
   font-family: 'Arvo', serif;
-  font-size: 1.2rem;
+  // font-size: 1.2rem;
   overflow-x: hidden;
   overflow-y: scroll;
   padding: .5em .8em;
@@ -120,18 +135,30 @@ body {
 
   @include hw(10vh, 100%);
 
-  font-size: 120%;
+  @include breakpoint(1) {
+    font-size: 100%;
+  }
+
+  @include breakpoint(2) {
+    font-size: 120%;
+  }
+
+  text-align: center;
 }
 
 h2 {
   // @include wireframe(10%);
+  @include breakpoint(1) {
+    font-size: 100%;
+  }
 
-  @include flex(1);
+  @include breakpoint(2) {
+    font-size: 130%;
+  }
 
-  font-size: 130%;
-  text-align: center;
-  min-height: 2.5em;
+  line-height: 1;
   padding: .6em 0;
+  text-align: center;
 }
 
 a:link,

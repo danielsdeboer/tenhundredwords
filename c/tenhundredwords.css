@@ -108,8 +108,13 @@ body {
   border-bottom: 1px solid #bdbdbd; }
   .thw-header h1 {
     color: #000;
-    font-size: 300%;
     text-align: center; }
+    @media only screen and (min-width: 0) and (max-width: 650px) {
+      .thw-header h1 {
+        font-size: 200%; } }
+    @media only screen and (min-width: 651px) and (max-width: 10000px) {
+      .thw-header h1 {
+        font-size: 300%; } }
   .thw-header a:link,
   .thw-header a:visited,
   .thw-header a:active,
@@ -216,10 +221,17 @@ body {
   flex: 20;
   border: 1px solid #bdbdbd;
   font-family: 'Arvo', serif;
-  font-size: 1.2rem;
   overflow-x: hidden;
   overflow-y: scroll;
   padding: .5em .8em; }
+  @media only screen and (min-width: 0) and (max-width: 650px) {
+    .thw-input,
+    .thw-output {
+      font-size: 100%; } }
+  @media only screen and (min-width: 651px) and (max-width: 10000px) {
+    .thw-input,
+    .thw-output {
+      font-size: 120%; } }
 
 .info-container {
   -webkit-box-flex: 1;
@@ -322,20 +334,24 @@ body {
   -ms-flex-pack: center;
   height: 10vh;
   width: 100%;
-  font-size: 120%; }
+  text-align: center; }
+  @media only screen and (min-width: 0) and (max-width: 650px) {
+    .thw-footer {
+      font-size: 100%; } }
+  @media only screen and (min-width: 651px) and (max-width: 10000px) {
+    .thw-footer {
+      font-size: 120%; } }
 
 h2 {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 130%;
-  text-align: center;
-  min-height: 2.5em;
-  padding: .6em 0; }
+  line-height: 1;
+  padding: .6em 0;
+  text-align: center; }
+  @media only screen and (min-width: 0) and (max-width: 650px) {
+    h2 {
+      font-size: 100%; } }
+  @media only screen and (min-width: 651px) and (max-width: 10000px) {
+    h2 {
+      font-size: 130%; } }
 
 a:link,
 a:visited,
