@@ -55,7 +55,8 @@ body {
   }
 }
 
-.thw-container {
+.thw-container,
+.thw-container-stretch {
   // @include wireframe(5%);
 
   @include display(flex);
@@ -64,6 +65,10 @@ body {
   @include justify-content(center);
 
   @include hw(80vh, 100vw);
+}
+
+.thw-container-stretch {
+  @include hw(auto, 100vw);
 }
 
 .input-container,
@@ -113,7 +118,13 @@ body {
 .thw-info {
   // @include wireframe(15%);
 
-  @include hw(auto, 60%);
+  @include breakpoint(1) {
+    @include hw(auto, 80%);
+  }
+
+  @include breakpoint(2) {
+    @include hw(auto, 60%);
+  }
 
   @include flex(20);
 
@@ -123,6 +134,14 @@ body {
   padding: 0;
 
   p {
+    @include breakpoint(1) {
+      font-size: 88%;
+    }
+
+    @include breakpoint(2) {
+      font-size: 100%;
+    }
+
     margin-bottom: .8em;
   }
 }
@@ -136,7 +155,7 @@ body {
   @include hw(10vh, 100%);
 
   @include breakpoint(1) {
-    font-size: 100%;
+    font-size: 90%;
   }
 
   @include breakpoint(2) {

@@ -124,7 +124,8 @@ body {
   .thw-header a:hover {
     text-decoration: underline; }
 
-.thw-container {
+.thw-container,
+.thw-container-stretch {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -161,6 +162,10 @@ body {
   justify-content: center;
   -ms-flex-pack: center;
   height: 80vh;
+  width: 100vw; }
+
+.thw-container-stretch {
+  height: auto;
   width: 100vw; }
 
 .input-container,
@@ -280,8 +285,6 @@ body {
   width: auto; }
 
 .thw-info {
-  height: auto;
-  width: 60%;
   -webkit-box-flex: 20;
   -moz-box-flex: 20;
   box-flex: 20;
@@ -293,8 +296,22 @@ body {
   font-size: 1.1em;
   line-height: 1.5;
   padding: 0; }
+  @media only screen and (min-width: 0) and (max-width: 650px) {
+    .thw-info {
+      height: auto;
+      width: 80%; } }
+  @media only screen and (min-width: 651px) and (max-width: 10000px) {
+    .thw-info {
+      height: auto;
+      width: 60%; } }
   .thw-info p {
     margin-bottom: .8em; }
+    @media only screen and (min-width: 0) and (max-width: 650px) {
+      .thw-info p {
+        font-size: 88%; } }
+    @media only screen and (min-width: 651px) and (max-width: 10000px) {
+      .thw-info p {
+        font-size: 100%; } }
 
 .thw-footer {
   display: -webkit-box;
@@ -337,7 +354,7 @@ body {
   text-align: center; }
   @media only screen and (min-width: 0) and (max-width: 650px) {
     .thw-footer {
-      font-size: 100%; } }
+      font-size: 90%; } }
   @media only screen and (min-width: 651px) and (max-width: 10000px) {
     .thw-footer {
       font-size: 120%; } }
