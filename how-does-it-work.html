@@ -35,7 +35,8 @@
         <p>I took the <a href="https://en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Contemporary_fiction">Wiktionary Contemporary Fiction Frequency List</a>, and wrote a quick PHP script to run it through the <a href="http://wordlist.aspell.net/other/">Automatically Generated Inflection Database</a> (part of the SCOWL family of word things).</p>
         <p>This gave me a long list of words and their variants, plurals, etc, which seems very close to the "canonical" Ten Hundred Word list used for XKCD.</p>
         <p>I wrote a simple jQuery script to compare incoming input to an array of good words, hand-crafted some HTML5 and CSS (using SASS and <a href="http://bourbon.io/">Bourbon</a>), and here we are.</p>
-        <p>Updated 2015-11-20 - Sorry about the terrible mobile experience (fixed hopefully). Also this thing is its own <a href="https://github.com/danielsdeboer/tenhundredwords">GitHub repository</a> now, in case you're into that sort of thing.</p>
+        <p>Updated 2015-11-20 - Sorry about the terrible mobile experience (fixed). Also this thing is its own <a href="https://github.com/danielsdeboer/tenhundredwords">GitHub repository</a> now, in case you're into that sort of thing.</p>
+        <p>Updated 2015-11-21 - Changed the internal word search from hunting through an array to matching an index on an object. This change will help minimize the lag between typing and getting results. It was already very small, now it should be even smaller.</p>
       </div>
 
     </div>
