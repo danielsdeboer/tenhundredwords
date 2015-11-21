@@ -26,7 +26,7 @@ $(document).ready(function() {
       if (test.match(/[a-z]+/gi)) {
 
         // Check the word against the canonical word list
-        if (!(key in wordList)) {
+        if (!(test in wordList)) {
           input[index] = '<span class="error">' + value + '</span>';
         }
       }
